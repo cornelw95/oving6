@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    Døgnpris 2000 kr <br>
+
+    Avreise: <input type= "date" id= "avreise" oninput="beregnPris()"></input><br>
+    Ankomst: <input type= "date" id="ankomst" oninput="beregnPris()"></input><br>
+
+    <div id="resultat"></div>
+
+    <script>
+
+      function beregnPris(){
+        //alert ("hei");
+
+        let avreise, ankomst;
+
+        avreise = new Date(document.getElementById("avreise").value);
+        ankomst = new Date(document.getElementById("ankomst").value);
+
+        if(avreise > ankomst) {
+
+          document.getElementById("resultat").innerHTML = "Ankomst må være etter avreise";
+        } else {
+
+          //kalkulator
+        }
+
+
+
+      }
+
+
+      </script>
+
+  </body>
+</html>
